@@ -1,0 +1,22 @@
+.btn{
+	background: #AAAAAA;
+	width: 100%;
+}
+.txt{
+	display: inline-block;
+	color: #e4393c;
+	width: 100%;
+}
+.wifilist{
+	border-bottom: 1px solid #000;
+  text-align: left;
+  width: 100%;
+  display: block
+}
+.dt{
+	color: #AAAAAA;
+	font-weight:bold;
+}
+.container{
+	padding: 10rpx;
+}

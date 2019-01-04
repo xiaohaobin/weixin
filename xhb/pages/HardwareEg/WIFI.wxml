@@ -1,0 +1,58 @@
+<!--logs.wxml-->
+<view class="container">
+	<view class="pd-20">		
+		<text class="statusTxt">当前状态:{{stateTxt}}</text>
+	</view>
+	<view class="pd-10">
+		<button class="btn" bindtap="onWifiInfo">获取当前连接WIFI连接的信息</button>
+		<text class="title">监听当前连接WIFI连接的信息：</text>
+		<view class="currWifilist">
+			<view>
+				<text class="dt">SSID:</text>
+				<text class="dl">{{currWifiInfo.SSID}}</text>
+			</view>
+			<view>
+				<text class="dt">BSSID:</text>
+				<text class="dl">{{currWifiInfo.BSSID}}</text>
+			</view>
+			<view>
+				<text class="dt">是否安全:</text>
+				<text class="dl">{{currWifiInfo.secure}}</text>
+			</view>
+			<view>
+				<text class="dt">信号强度:</text>
+				<text class="dl">{{currWifiInfo.signalStrength}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="pd-10">
+		<button class="btn"  bindtap="getWifiList">获取附近WIFI列表</button>
+		<text class="title">附近WIFI列表信息：</text>
+		<view class="wifilist" wx:for="{{wifiList}}">
+			<view>
+				<text class="dt">SSID:</text>
+				<text class="dl">{{item.SSID}}</text>
+			</view>
+			<view>
+				<text class="dt">BSSID:</text>
+				<text class="dl">{{item.BSSID}}</text>
+			</view>
+			<view>
+				<text class="dt">是否安全:</text>
+				<text class="dl">{{item.secure}}</text>
+			</view>
+			<view>
+				<text class="dt">信号强度:</text>
+				<text class="dl">{{item.signalStrength}}</text>
+			</view>
+			<view>
+				<view class="section">
+				  <input placeholder="输入密码" auto-focus  bindinput='inputWacth' data-model="{{item.SSID}}"/>
+				</view>
+				<button class="btn btn-mini" bindtap="connectWifi" data-index="{{index}}"  data-info="{{item}}">连接</button>
+			</view>
+		</view>
+	</view>
+	
+</view>
+ 

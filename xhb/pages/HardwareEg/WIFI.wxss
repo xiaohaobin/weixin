@@ -1,0 +1,41 @@
+.btn{
+	background: #AAAAAA;
+	width: 100%;
+}
+.txt{
+	display: inline-block;
+	color: #e4393c;
+	width: 100%;
+}
+.wifilist{
+	border-bottom: 1px solid #000;
+  text-align: left;
+  width: 100%;
+  display: block
+}
+.dt{
+	color: #AAAAAA;
+	font-weight:bold;
+}
+.container{
+	padding: 10rpx 0;
+}
+.pd-10{
+	padding: 10px;
+}
+.title{
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #E4393C;
+}
+.statusTxt{
+	color: red;
+}
+.pd-20{
+	padding: 20px;
+}
+.btn.btn-mini{
+	width: 50%;
+	/* height: 30px; */
+	background:#E4393C;
+}

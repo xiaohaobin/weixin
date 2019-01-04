@@ -1,0 +1,12 @@
+<view class="container">
+	<view>
+		<progress percent="{{val1}}" show-info/>
+		<progress percent="40" stroke-width="12" />
+		<progress percent="90" color="pink" active/>
+		<progress percent="99" active activeColor="red" backgroundColor="#c9c9c9" bindactiveend="bindactiveendFn" show-info/>
+	</view>
+	<view>
+		<button bindtap="addFn">进度条1：点击慢慢递增到100%</button>
+		<button bindtap="endFn">进度条1：直接定义100%</button>
+	</view>
+</view>

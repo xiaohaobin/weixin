@@ -1,0 +1,5 @@
+<!--wxml-->
+<view class="container">
+  <button class="btn" bindtap="getWifiList">WIFI和网络模块</button>
+</view>
+ 

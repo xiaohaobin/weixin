@@ -1,0 +1,49 @@
+<view class="section">
+  <view class="section__title">vertical scroll</view>
+	<!-- 
+		scroll-top距离滚动模块顶部位置 
+		scroll-into-view值应为某子元素id（id不能以数字开头）。设置哪个方向可滚动，则在哪个方向滚动到该元素（即是以拥有该id值的元素，让其置顶）
+		bindscrolltoupper监听滚动条滚动到顶部
+		bindscrolltolower监听滚动条滚动到底部
+		scroll-y允许垂直滚动（不写默认false）
+		bindscroll滚动监听
+		enable-back-to-top iOS点击顶部状态栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向（不写默认false）
+		
+		Bug & Tip
+
+    tip: 请勿在 scroll-view 中使用 textarea、map、canvas、video 组件
+    tip: scroll-into-view 的优先级高于 scroll-top
+    tip: 在滚动 scroll-view 时会阻止页面回弹，所以在 scroll-view 中滚动，是无法触发 onPullDownRefresh
+    tip: 若要使用下拉刷新，请使用页面的滚动，而不是 scroll-view ，这样也能通过点击顶部状态栏回到页面顶部
+
+	-->
+  <scroll-view
+    scroll-y
+    style="height: 200px;"
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower"
+    bindscroll="scroll"
+    scroll-into-view="{{toView}}"
+    scroll-top="{{scrollTop}}"
+		enable-back-to-top
+  >
+    <view id="green" class="scroll-view-item bc_green">1</view>
+    <view id="red" class="scroll-view-item bc_red">2</view>
+    <view id="yellow" class="scroll-view-item bc_yellow">3</view>
+    <view id="blue" class="scroll-view-item bc_blue">4</view>
+  </scroll-view>
+
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">点击我滚动进入视图</button>
+    <button size="mini" bindtap="tapMove">点击我滚动</button>
+  </view>
+</view>
+<view class="section section_gap">
+  <view class="section__title">horizontal scroll</view>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view id="green" class="scroll-view-item_H bc_green"></view>
+    <view id="red" class="scroll-view-item_H bc_red"></view>
+    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+  </scroll-view>
+</view>

@@ -1,0 +1,30 @@
+<!--logs.wxml-->
+<view class="container" style="padding: 10px;">
+	<swiper style="width:{{imgWidth}}px;height:{{imgHeight}}px" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"
+	 interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+		<block wx:for="{{imgUrls}}">
+			<swiper-item>
+				<image src="{{item}}" class="slide-image" height="240" mode="widthFix" />
+			</swiper-item>
+		</block>
+	</swiper>
+	
+	<button bindtap="changeIndicatorDots">指示点是否显示</button>
+	<button bindtap="changeAutoplay">是否自动播放</button>
+	
+	
+	
+	<view class="section section_gap">
+		<text class="section__title">interval（图片切换间隔）</text>
+		<view class="body-view">
+			<slider bindchange="intervalChange" show-value min="500" max="5000" />
+		</view>
+	</view>
+	
+		<view class="section section_gap">
+			<text class="section__title">duration（动画执行时间）</text>
+			<view class="body-view">
+				<slider bindchange="durationChange" show-value min="500" max="2000" />
+			</view>
+		</view>
+</view>

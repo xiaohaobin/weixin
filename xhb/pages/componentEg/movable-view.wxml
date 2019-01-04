@@ -1,0 +1,71 @@
+<view class="section">
+	<view class="section__title">movable-view区域小于movable-area</view>
+	<movable-area style="height: 200px; width: 100vw; background: red;">
+		<!-- 
+		 inertia 是否带有惯性（Boolean类型）
+		 direction 允许移动的方向（属性值有all、vertical、horizontal、none）
+		 x,y(移动视图相对于以动区域的位置)（Number / String 类型）
+		 damping 阻尼系数，用于控制x或y改变时的动画和过界回弹的动画，值越大移动越快（number类型）
+		 out-of-bounds 超过可移动区域后，movable-view是否还可以移动 （Boolean类型）
+		 friction 摩擦系数，用于控制惯性滑动的动画，值越大摩擦力越大，滑动越快停止；必须大于0，否则会被设置成默认值（number类型）
+		 disabled 是否禁用
+		 scale 是否支持双指缩放，默认缩放手势生效区域是在movable-view内
+		 scale-min 定义缩放倍数最小值（number类型）
+		 scale-max 	定义缩放倍数最大值（number类型）
+		 scale-value 定义缩放倍数，取值范围为 0.5 - 10（number类型）
+		 animation 是否使用动画
+		 -->
+		<movable-view 
+			style="height: 50px; width: 50px; background: blue;" 
+			x="{{x}}" y="{{y}}" 
+			inertia="{{inertia}}"
+			animation="{{animation}}"
+			damping="{{damping}}"
+			friction="{{friction}}"
+			direction="all">mmp</movable-view>
+	</movable-area>	
+	
+	<view style="width: 100%;">
+		<button class="btn" bindtap="inertiaFn">是否惯性：{{inertia}}</button>
+		<button class="btn" bindtap="animationFn">是否动画：{{animation}}</button>
+		<view class="section section_gap">
+			<text class="section__title">阻尼系数{{damping}}</text>
+			<view class="body-view">
+				<slider bindchange="dampingChange" show-value min="1" max="100" />
+			</view>
+		</view>
+		<view class="section section_gap">
+			<text class="section__title">摩擦系数{{friction}}</text>
+			<view class="body-view">
+				<slider bindchange="frictionChange" show-value min="1" max="100" />
+			</view>
+		</view>
+	</view>
+	
+	<view class="btn-area">
+		<button size="mini" bindtap="tap">click me to move to (30px, 30px)</button>
+	</view>
+	
+	<!-- <view class="section__title">movable-view区域大于movable-area</view>
+	<movable-area style="height: 100px; width: 100px; background: red;">
+		<movable-view style="height: 200px; width: 200px; background: blue;" direction="all"></movable-view>
+	</movable-area> -->
+	
+	<view class="section__title">可放缩</view>
+	<view style="width: 100%;">
+		<view style="width: 100%;">
+			<text>x:{{scaleData.x}}</text>,
+			<text>y:{{scaleData.y}}</text>,
+			<text>scale:{{scaleData.scale}}</text>
+		</view>
+		<view style="width: 100%;">
+			<text>x:{{moveData.x}}</text>,
+			<text>y:{{moveData.y}}</text>,
+			<text>type:{{moveData.type}}</text>
+		</view>
+	</view>
+	<movable-area style="height: 300px; width: 100vw; background: red;" scale-area>
+		<movable-view style="height: 50px; width: 50px; background: blue;" direction="all" bindchange="onChange" bindscale="onScale"
+		 scale scale-min="0.5" scale-max="4" scale-value="2"></movable-view>
+	</movable-area>
+</view>

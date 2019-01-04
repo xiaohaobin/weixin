@@ -1,0 +1,17 @@
+<!--wxml-->
+<view class="container">
+	<text>视图容器</text>
+	<button class="btn" bindtap="viewComponent">view（视图容器）</button>
+	<button class="btn" bindtap="scrollViewComponent">scroll_view(滚动视图容器)</button>
+	<button class="btn" bindtap="swiperComponent">swiper轮播(滑块视图容器)</button>
+	<button class="btn" bindtap="movableViewComponent">movable-view(可移动的视图容器)</button>
+	<button class="btn" bindtap="coverViewComponent">cover-view(可移动的视图容器)</button>
+	
+	<text>基础内容</text>
+	<button class="btn" bindtap="iconComponent">icon&rich-txt(图标和富文本)</button>
+	<button class="btn" bindtap="progressComponent">progress(进度条)</button>
+	
+	<text>表单内容</text>
+	<button class="btn" bindtap="buttonComponent">button(按钮)</button>
+	<button class="btn" bindtap="checkboxComponent">checkbox(复选框)</button>
+</view>

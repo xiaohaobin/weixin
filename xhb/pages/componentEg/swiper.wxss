@@ -1,0 +1,16 @@
+@import "../../lib/css/weui.wxss";
+
+.container{
+	padding: 10rpx;
+}
+.slide-image{
+	width: 100%;
+	height: 100%;
+}
+.swiper{
+	padding: 0;
+	margin: 0;
+}	
+.section{
+	width: 100%;
+}

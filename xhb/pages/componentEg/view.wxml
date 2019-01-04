@@ -1,0 +1,27 @@
+<!--logs.wxml-->
+<view class="container" style="padding: 10px;">
+	<view class="section">
+	  <view class="section__title">flex-direction: row(行排序)</view>
+	  <view class="flex-wrp" style="flex-direction:row;">
+		<view class="flex-item bc_green">1</view>
+		<view class="flex-item bc_red">2</view>
+		<view class="flex-item bc_blue">3</view>
+	  </view>
+	</view>
+	<view class="section">
+	  <view class="section__title">flex-direction: column（列排序）</view>
+	  <view class="flex-wrp" style="height: 300px;flex-direction:column;">
+		<view class="flex-item bc_green">1</view>
+		<view class="flex-item bc_red">2</view>
+		<view class="flex-item bc_blue">3</view>
+	  </view>
+	</view>
+	<view class="section">
+		<view class="section__title">hover-class属性应用</view>
+		<view class="flex-wrp">
+			<view class="bc_green" hover-class="none">没有点击态效果</view>
+			<view class="bc_red" hover-class="ui-share-hover">点击hover-class执行样式</view>
+		</view>
+	</view>
+</view>
+ 

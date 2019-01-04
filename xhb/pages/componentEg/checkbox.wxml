@@ -1,0 +1,9 @@
+<view class="container">
+	<text>请选择国家：</text>
+	<checkbox-group bindchange="checkboxChange">
+	  <label class="checkbox" wx:for="{{items}}">
+		<checkbox value="{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}"/>
+		{{item.value}}
+	  </label>
+	</checkbox-group>
+</view>

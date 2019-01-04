@@ -1,0 +1,13 @@
+@import "../../lib/css/weui.wxss";
+
+.container{
+	padding: 10rpx;
+}
+	
+.section{
+	width: 100%;
+}
+.btn{
+	width:50%;
+	display:inline-block;
+}

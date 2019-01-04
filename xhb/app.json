@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/componentModule/componentModule",
+	"pages/hardwareModule/hardwareModule",
+	"pages/componentEg/view",
+	"pages/componentEg/scroll_view",
+	"pages/componentEg/swiper",
+	"pages/componentEg/movable-view",
+	"pages/componentEg/cover-view",
+	"pages/componentEg/icon",
+	"pages/componentEg/progress",
+	"pages/componentEg/button",
+	"pages/componentEg/checkbox",
+	"pages/HardwareEg/WIFI"
+		
+  ],
+  "window": {
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#e4393c",
+    "navigationBarTitleText": "肖浩彬的小程序",
+    "navigationBarTextStyle":"black",
+		"enablePullDownRefresh":true
+		
+  },
+  "tabBar": {
+		"backgroundColor":"#fff",
+    "list": [
+			{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+			"iconPath":"pages/index/icon.png",
+			"selectedIconPath":"pages/index/select_icon.png"
+			},
+			{
+			"pagePath": "pages/hardwareModule/hardwareModule",
+			"text": "手机硬件模块",
+			"iconPath":"pages/hardwareModule/icon.png",
+			"selectedIconPath":"pages/hardwareModule/select_icon.png"
+			},
+			{
+				"pagePath": "pages/componentModule/componentModule",
+				"text": "组件模块",
+				"iconPath":"pages/componentModule/icon.png",
+				"selectedIconPath":"pages/componentModule/select_icon.png"
+			}
+		]
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "downloadFile": 60000,
+		"connectSocket":60000,
+		"uploadFile":60000
+  },
+  "debug": true
+}
