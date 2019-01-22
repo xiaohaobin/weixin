@@ -1,17 +1,40 @@
 <!--wxml-->
 <view class="container">
 	<text>视图容器</text>
-	<button class="btn" bindtap="viewComponent">view（视图容器）</button>
-	<button class="btn" bindtap="scrollViewComponent">scroll_view(滚动视图容器)</button>
-	<button class="btn" bindtap="swiperComponent">swiper轮播(滑块视图容器)</button>
-	<button class="btn" bindtap="movableViewComponent">movable-view(可移动的视图容器)</button>
-	<button class="btn" bindtap="coverViewComponent">cover-view(可移动的视图容器)</button>
+	<button class="btn" bindtap="locationHref" data-url="view">view（视图容器）</button>
+	<button class="btn" bindtap="locationHref" data-url="scroll_view">scroll_view(滚动视图容器)</button>
+	<button class="btn" bindtap="locationHref" data-url="swiper">swiper轮播(滑块视图容器)</button>
+	<button class="btn" bindtap="locationHref" data-url="movable-view">movable-view(可移动的视图容器)</button>
+	<button class="btn" bindtap="locationHref" data-url="cover-view">cover-view(可移动的视图容器)</button>
 	
 	<text>基础内容</text>
-	<button class="btn" bindtap="iconComponent">icon&rich-txt(图标和富文本)</button>
-	<button class="btn" bindtap="progressComponent">progress(进度条)</button>
+	<button class="btn" bindtap="locationHref" data-url="icon">icon&rich-txt(图标和富文本)</button>
+	<button class="btn" bindtap="locationHref" data-url="progress">progress(进度条)</button>
 	
 	<text>表单内容</text>
-	<button class="btn" bindtap="buttonComponent">button(按钮)</button>
-	<button class="btn" bindtap="checkboxComponent">checkbox(复选框)</button>
+	<button class="btn" bindtap="locationHref" data-url="button">button(按钮)</button>
+	<button class="btn" bindtap="locationHref" data-url="checkbox">checkbox(复选框)</button>
+	<button class="btn" bindtap="locationHref" data-url="form">form(form表单)</button>
+	<button class="btn" bindtap="locationHref" data-url="picker">picker(各种选择器)</button>
+	<button class="btn" bindtap="locationHref" data-url="picker-view-column">picker-view-column(嵌入页面的滚动选择器)</button>
+	
+	<text>导航</text>
+	<button class="btn" bindtap="locationHref" data-url="navigator">navigator(路由跳转)</button>
+	<button class="btn" bindtap="locationHref" data-url="plugin">plugin(调用第三方插件)</button>
+	
+	<text>媒体组件</text>
+	<button class="btn" bindtap="locationHref" data-url="audio">audio(音频组件)</button>
+	<button class="btn" bindtap="locationHref" data-url="image">image(图片组件)</button>	
+	<button class="btn" bindtap="locationHref" data-url="video">video(视频组件)</button>
+	<button class="btn" bindtap="locationHref" data-url="camera">camera(相机组件)</button>
+	<button class="btn" bindtap="locationHref" data-url="camera2">camera2(结合后台提交上传的相机组件)</button>
+	<button class="btn" bindtap="locationHref" data-url="live-player">live-player(实时音视频播放)</button>
+	<button class="btn" bindtap="locationHref" data-url="live-pusher">live-pusher(实时音视频录制)</button>
+	<text>地图</text>
+	<button class="btn" bindtap="locationHref" data-url="map">map(腾讯地图)</button>
+	<text>画布</text>
+	<button class="btn" bindtap="locationHref" data-url="canvas">canvas(画布)</button>
+	<button class="btn" bindtap="locationHref" data-url="canvas2">canvas2(画布)</button>
+  <text>开放能力</text>
+  <button class="btn" bindtap="locationHref" data-url="open-data">open-data(用于展示微信开放的数据)</button>
 </view>

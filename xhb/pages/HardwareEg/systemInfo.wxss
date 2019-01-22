@@ -1,0 +1,5 @@
+/* pages/HardwareEg/systemInfo.wxss */
+.flex{
+  display: flex;
+  justify-content:flex-start;
+}

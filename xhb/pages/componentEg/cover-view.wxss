@@ -1,7 +1,7 @@
-@import "../../lib/css/weui.wxss";
 
+@import "../../lib/css/weui.wxss";
 .container{
-	padding: 10rpx;
+    padding: 10rpx;
 }
 .controls {
   position: absolute;
@@ -13,9 +13,9 @@
   text-align: center;
 }
 .controls:after{
-	content: "";
-	display: block;
-	clear: both;
+    content: "";
+    display: block;
+    clear: both;
 }
 .play,
 .pause,
@@ -35,15 +35,15 @@ cover-image.img {
   /* margin: 5px auto; */
 }
 .cover-view{
-	width: auto;
-	display: inline-block;
+    width: auto;
+    display: inline-block;
 }
 .play{
-	float: left;
+    float: left;
 }
 .pause{
-	float: right;
+    float: right;
 }
 .time{
-	/* clear: both; */
+    /* clear: both; */
 }

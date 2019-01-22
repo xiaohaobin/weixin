@@ -19,10 +19,11 @@ Page({
 		  }]
 		}]
 	},
-	onLoad: function() {
+	onLoad: function(e) {
+		console.log("页面栈:",getCurrentPages());
 		var _this = this;
 
-		console.log("页面加载");
+		console.log("从别的页面传输过来的数据：",e);
 
 	},
 	onPullDownRefresh: function() { //监听下拉刷新,

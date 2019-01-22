@@ -1,0 +1,7 @@
+{
+  "publicComponents": {
+     "regionPicker" : "components/regionPicker/regionPicker",
+		 "list":"components/list/list"
+  },
+  "main": "index.js"
+}

@@ -8,4 +8,5 @@ Page({
   pause() {
     this.videoCtx.pause()
   }
-})
+});
+

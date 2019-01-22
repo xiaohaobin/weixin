@@ -1,0 +1,25 @@
+<!-- map.wxml -->
+<map
+  id="map"
+  longitude="{{centerLng}}"
+  latitude="{{centerLat}}"
+  scale="14"
+  controls="{{controls}}"
+  bindcontroltap="controltap"
+  markers="{{markers}}"
+  bindmarkertap="markertap"
+  polyline="{{polyline}}"
+  bindregionchange="regionchange"
+	circles="{{circles}}"
+  show-location
+	show-compass
+	subkey="XZXBZ-4YXC4-MBYUA-DRQUW-2GF6O-63BVP"
+  style="width: 100%; height: 300px;"
+></map>
+
+<button type="primary" bindtap="getCenterLocation">获取地图控件的中心位置</button>
+<button type="primary" bindtap="moveToLocation">移动到当前位置</button>
+<button type="primary" bindtap="translateMarker">移动指定标注到指定经纬度</button>
+<button type="primary" bindtap="includePoints">缩放地图指定部分经纬度可见</button>
+<button type="primary" bindtap="getRegion">获取当前地图的视野范围</button>
+<button type="primary" bindtap="getScale">获取当前地图的缩放级别</button>

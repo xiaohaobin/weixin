@@ -1,5 +1,11 @@
 <!--wxml-->
 <view class="container">
-  <button class="btn" bindtap="getWifiList">WIFI和网络模块</button>
+  <text>网络</text>
+  <button class="btn" bindtap="locationHref" data-url="WIFI">WIFI和网络模块</button>
+  <text>系统</text>
+  <button class="btn" bindtap="locationHref" data-url="systemInfo">系统信息</button>
+  <text>界面</text>
+  <button class="btn" bindtap="locationHref" data-url="layer">弹层</button>
+  <button class="btn" bindtap="locationHref" data-url="animated">动画</button>
 </view>
  

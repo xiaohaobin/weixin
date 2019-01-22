@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "plugins": {
+    "myPlugin": {
+      "version": "dev",
+      "provider": "wx1b4f4027abb2a66e"
+    }		
+  },
+	"functionalPages": true
+}

@@ -1,0 +1,6 @@
+{
+	"usingComponents": {
+		"regionPicker" : "plugin://myPlugin/regionPicker",
+		"list" : "plugin://myPlugin/list"
+	}
+}

@@ -1,0 +1,12 @@
+<!-- camera.wxml -->
+<camera
+  device-position="back"
+  flash="off"
+  binderror="error"
+  style="width: 100%; height: 300px;"
+></camera>
+<button type="primary" bindtap="takePhoto">拍照</button>
+<button bindtap="startRecord">开始录像</button>
+<button bindtap="stopRecord">结束录像</button>
+<view>预览</view>
+<image mode="widthFix" src="{{src}}"></image>

@@ -1,0 +1,57 @@
+<!--pages/HardwareEg/systemInfo.wxml-->
+<!-- <text>pages/HardwareEg/systemInfo.wxml</text> -->
+<view>
+  <view class="flex">
+    <text>设备品牌</text>：
+    <text>{{systemInfo.brand}}</text>
+  </view>
+  <view class="flex">
+    <text>设备型号</text>：
+    <text>{{systemInfo.model}}</text>
+  </view>
+  <view class="flex">
+    <text>设备像素比</text>：
+    <text>{{systemInfo.pixelRatio}}</text>
+  </view>
+  <view class="flex">
+    <text>屏幕宽度,高度</text>：
+    <text>{{systemInfo.screenWidth}},{{systemInfo.screenHeight}}</text>
+  </view>
+   <view class="flex">
+    <text>可使用窗口宽度,高度</text>：
+    <text>{{systemInfo.windowWidth}},{{systemInfo.windowHeight}}</text>
+  </view>
+  <view class="flex">
+    <text>状态栏的高度</text>：
+    <text>{{systemInfo.statusBarHeight}}</text>
+  </view>
+  <view class="flex">
+    <text>微信设置的语言</text>：
+    <text>{{systemInfo.language}}</text>
+  </view>
+    <view class="flex">
+    <text>微信版本号</text>：
+    <text>{{systemInfo.version}}</text>
+  </view>
+  <view class="flex">
+    <text>操作系统及版本</text>：
+    <text>{{systemInfo.system}}</text>
+  </view>
+  <view class="flex">
+    <text>客户端平台</text>：
+    <text>{{systemInfo.platform}}</text>
+  </view>
+  <view class="flex">
+    <text>用户字体大小</text>：
+    <text>{{systemInfo.fontSizeSetting}}</text>
+  </view>
+  <view class="flex">
+    <text>客户端基础库版本</text>：
+    <text>{{systemInfo.SDKVersion}}</text>
+  </view>
+  <!-- 设备性能等级（仅Android小游戏）。取值为：-2 或 0（该设备无法运行小游戏），-1（性能未知），>=1（设备性能值，该值越高，设备性能越好，目前最高不到50） -->
+  <view class="flex">
+    <text>设备性能等级</text>：
+    <text>{{systemInfo.benchmarkLevel}}</text>
+  </view>
+</view>

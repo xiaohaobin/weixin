@@ -1,0 +1,6 @@
+<view wx:for="{{list}}" wx:key="name">
+  <view>{{item.name}}:{{item.price}}</view>
+</view>
+<!-- <functional-page-navigator name="loginAndGetUserInfo" bind:success="loginSuccess">
+	  <button>登录到插件</button>
+</functional-page-navigator> -->

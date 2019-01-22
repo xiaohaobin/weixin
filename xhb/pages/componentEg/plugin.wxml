@@ -1,0 +1,7 @@
+
+<view>
+	
+	<!-- 第三方插件  -->
+	<map-route route-info="{{routeInfo}}"></map-route>	
+	
+</view>

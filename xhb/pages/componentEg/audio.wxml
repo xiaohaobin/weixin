@@ -1,0 +1,35 @@
+<view>
+	<!-- audio.wxml -->
+	<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+
+	<button type="primary" bindtap="audioPlay">播放</button>
+	<button type="primary" bindtap="audioPause">暂停</button>
+	<button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+	<button type="primary" bindtap="audioStart">回到开头</button>
+	<text>
+		注意：1.6.0 版本开始，该组件不再维护。建议使用能力更强的 wx.createInnerAudioContext 接口
+	</text>
+	<view>
+		<text>以下是采用wx.createInnerAudioContext 接口自定义的音频组件</text>
+		<view class="audioBox">
+			<view class="section section_gap">
+				<view class="audioView">
+					<image src="{{poster}}" class="poster"></image>
+					<text class="audioTime">{{_innerAudioContext.audioCurrTime}}/{{_innerAudioContext.audioTime}}</text>
+				</view>
+			  
+			  <view class="body-view">
+				  <slider bindchange="sliderChange" 
+						   step="1" 
+						   min="0" 
+						   max="{{_innerAudioContext.totalS}}" 
+						   value="{{_innerAudioContext.currS}}" 
+						   show-value/></view>
+			  <view>
+				  <button class="audioBtn" bindtap="innerAudioContextPlay">播放</button>
+				  <button class="audioBtn" bindtap="innerAudioContextPause">停止</button>
+			  </view>
+			</view>
+		</view>
+	</view>
+</view>

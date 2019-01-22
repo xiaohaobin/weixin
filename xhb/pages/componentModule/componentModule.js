@@ -6,7 +6,7 @@ Page({
     
   },
   onLoad: function () {
-   
+   console.log("页面栈:",getCurrentPages());
   },
 	onPullDownRefresh:function(){//监听下拉刷新,
 		// wx.startPullDownRefresh();//开启下拉刷新的动画
@@ -14,66 +14,87 @@ Page({
 		console.log("完成：complete");
 	},
 	//打开view模块
-	viewComponent:function(){
-		var _this = this;
+// 	viewComponent:function(){
+// 		var _this = this;
+// 		wx.navigateTo({
+// 			url: '../componentEg/view'
+// 		})	
+// 	},
+// 	//打开scrollview模块
+// 	scrollViewComponent:function(){
+// 		var _this = this;
+// 		wx.navigateTo({
+// 			url: '../componentEg/scroll_view'
+// 		})	
+// 	},
+// 	//打开swiper模块
+// 	swiperComponent:function(){
+// 		var _this = this;
+// 		wx.navigateTo({
+// 			url: '../componentEg/swiper'
+// 		})	
+// 	},
+// 	//打开可移动的视图模块
+// 	movableViewComponent:function(){
+// 		var _this = this;
+// 		wx.navigateTo({
+// 			url: '../componentEg/movable-view'
+// 		})	
+// 	},
+// 	//打开覆盖文本视图模块
+// 	coverViewComponent:function(){
+// 		var _this = this;
+// 		wx.navigateTo({
+// 			url: '../componentEg/cover-view'
+// 		})	
+// 	},
+// 	//打开图标和富文本模块
+// 	iconComponent:function(){
+// 		var _this = this;
+// 		wx.navigateTo({
+// 			url: '../componentEg/icon'
+// 		})	
+// 	},
+// 	//打开进度条模块
+// 	progressComponent:function(){
+// 		var _this = this;
+// 		wx.navigateTo({
+// 			url: '../componentEg/progress'
+// 		})	
+// 	},
+// 	//打开按钮模块
+// 	buttonComponent:function(){
+// 		var _this = this;
+// 		wx.navigateTo({
+// 			url: '../componentEg/button'
+// 		})	
+// 	},
+// 	//打开复选框模块
+// 	checkboxComponent:function(){
+// 		var _this = this;
+// 		wx.navigateTo({
+// 			url: '../componentEg/checkbox'
+// 		})	
+// 	},
+// 	//打开form模块
+// 	formComponent:function(){
+// 		var _this = this;
+// 		wx.navigateTo({
+// 			url: '../componentEg/form'
+// 		})	
+// 	},
+// 	//打开picker选择器模块
+// 	pickerComponent:function(){
+// 		var _this = this;
+// 		wx.navigateTo({
+// 			url: '../componentEg/picker'
+// 		})	
+// 	},
+	//打开指定模块
+	locationHref:function(e){
+		console.log(e.target.dataset.url);
 		wx.navigateTo({
-			url: '../componentEg/view'
+			url: '../componentEg/' + e.target.dataset.url
 		})	
-	},
-	//打开scrollview模块
-	scrollViewComponent:function(){
-		var _this = this;
-		wx.navigateTo({
-			url: '../componentEg/scroll_view'
-		})	
-	},
-	//打开swiper模块
-	swiperComponent:function(){
-		var _this = this;
-		wx.navigateTo({
-			url: '../componentEg/swiper'
-		})	
-	},
-	//打开可移动的视图模块
-	movableViewComponent:function(){
-		var _this = this;
-		wx.navigateTo({
-			url: '../componentEg/movable-view'
-		})	
-	},
-	//打开覆盖文本视图模块
-	coverViewComponent:function(){
-		var _this = this;
-		wx.navigateTo({
-			url: '../componentEg/cover-view'
-		})	
-	},
-	//打开图标和富文本模块
-	iconComponent:function(){
-		var _this = this;
-		wx.navigateTo({
-			url: '../componentEg/icon'
-		})	
-	},
-	//打开进度条模块
-	progressComponent:function(){
-		var _this = this;
-		wx.navigateTo({
-			url: '../componentEg/progress'
-		})	
-	},
-	//打开按钮模块
-	buttonComponent:function(){
-		var _this = this;
-		wx.navigateTo({
-			url: '../componentEg/button'
-		})	
-	},
-	//打开复选框模块
-	checkboxComponent:function(){
-		var _this = this;
-		wx.navigateTo({
-			url: '../componentEg/checkbox'
-		})	
-	},
+	}
 })

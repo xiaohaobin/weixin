@@ -15,12 +15,19 @@ Page({
 		wx.stopPullDownRefresh();//关闭下拉刷新的动画
 		console.log("完成：complete");
 	},
-	getWifiList:function(){
-		var _this = this;
-		wx.navigateTo({
-			url: '../HardwareEg/WIFI'
-		})
+	// getWifiList:function(){
+	// 	var _this = this;
+	// 	wx.navigateTo({
+	// 		url: '../HardwareEg/WIFI'
+	// 	})
 
-	}
+	// },
+  //打开指定模块
+  locationHref: function (e) {
+    console.log(e.target.dataset.url);
+    wx.navigateTo({
+      url: '../HardwareEg/' + e.target.dataset.url
+    })
+  }
 	
 });

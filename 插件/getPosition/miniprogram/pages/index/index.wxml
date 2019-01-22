@@ -1,0 +1,6 @@
+<list></list>
+<regionPicker region="{{region}}" bindchangeEvent="changeEvent" />
+
+<button class='submit' bindtap="submit">提交</button>
+
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>

@@ -25,6 +25,65 @@ var common = {
 		var num = Math.floor(Math.random() * (max - min) + min);
 		return num;
 	},
+	/**
+	 * 秒数转化为时分秒时间格式
+	 * @param {Number} ts 秒数
+	 * @return {String}
+	 * */
+	secondToStr:function(ts){
+		/**
+		 * zeroize值和长度（默认值是2）。
+		 * @param {Object} v
+		 * @param {Number} l
+		 * @return {String} 
+		 */
+		function ultZeroize(v, l) {
+			var z = "";
+			l = l || 2;
+			v = String(v);
+			for(var i = 0; i < l - v.length; i++) {
+				z += "0";
+			}
+			return z + v;
+		};
+		
+		
+		if(isNaN(ts)) {
+			return "--:--:--";
+		}
+		var h = parseInt(ts / 3600);
+		var m = parseInt((ts % 3600) / 60);
+		var s = parseInt(ts % 60);
+		return (ultZeroize(h) + ":" + ultZeroize(m) + ":" + ultZeroize(s));
+	},
+	  /**
+		 * 将本地资源上传到开发者服务器，客户端发起一个 HTTPS POST 请求
+		 * @param {String} url 开发者服务器 url
+		 * @param {String} filePath 要上传文件资源的路径
+		 * @param {String} name 
+		 * @param {Object} formData HTTP 请求中其他额外的 form data
+		 * @param {Function} callback 上传成功回调函数
+		 */
+	uploadFile:function(url, filePath, name, formData,callback) {
+	  wx.uploadFile({
+	  	url: url, //仅为示例，非真实的接口地址
+	  	filePath:filePath,
+	  	name: name,
+	  	header: {
+	  		"Content-Type": "multipart/form-data"
+	  	},
+	  	formData:formData,
+	  	success: function(res) {
+	  		var data = res.data
+	  		console.log("上传成功",data)
+			callback(res);
+	  		//do something
+	  	},
+		fail:function(res){
+			console.log("上传失败",res)
+		}
+	  })
+	}
 };
 
 //暴露接口

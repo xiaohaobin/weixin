@@ -1,0 +1,9 @@
+<!--pages/HardwareEg/layer.wxml-->
+<!-- <text>pages/HardwareEg/layer.wxml</text> -->
+<view>
+  <button bindtap="loading">加载层</button>
+  <button bindtap="closeLoading">关闭加载层</button>
+  <button bindtap="comfirnLayer">comfirn弹层</button>
+  <button bindtap="toastLayer">toast弹层</button>
+  <button bindtap="ActionSheet">ActionSheet弹层</button>
+</view>

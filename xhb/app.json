@@ -2,55 +2,78 @@
   "pages": [
     "pages/index/index",
     "pages/componentModule/componentModule",
-	"pages/hardwareModule/hardwareModule",
-	"pages/componentEg/view",
-	"pages/componentEg/scroll_view",
-	"pages/componentEg/swiper",
-	"pages/componentEg/movable-view",
-	"pages/componentEg/cover-view",
-	"pages/componentEg/icon",
-	"pages/componentEg/progress",
-	"pages/componentEg/button",
-	"pages/componentEg/checkbox",
-	"pages/HardwareEg/WIFI"
-		
+    "pages/hardwareModule/hardwareModule",
+    "pages/componentEg/view",
+    "pages/componentEg/scroll_view",
+    "pages/componentEg/swiper",
+    "pages/componentEg/movable-view",
+    "pages/componentEg/cover-view",
+    "pages/componentEg/icon",
+    "pages/componentEg/progress",
+    "pages/componentEg/button",
+    "pages/componentEg/checkbox",
+    "pages/componentEg/form",
+    "pages/componentEg/picker",
+    "pages/componentEg/picker-view-column",
+    "pages/componentEg/navigator",
+    "pages/componentEg/plugin",
+    "pages/componentEg/audio",
+    "pages/componentEg/image",
+    "pages/componentEg/video",
+    "pages/componentEg/camera",
+    "pages/componentEg/camera2",
+    "pages/componentEg/live-player",
+    "pages/componentEg/live-pusher",
+    "pages/componentEg/map",
+    "pages/componentEg/canvas",
+    "pages/componentEg/canvas2",
+    "pages/HardwareEg/WIFI",
+    "pages/componentEg/open-data",
+    "pages/HardwareEg/systemInfo",
+    "pages/HardwareEg/layer",
+    "pages/HardwareEg/animated"
   ],
   "window": {
-    "backgroundTextStyle":"dark",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#e4393c",
     "navigationBarTitleText": "肖浩彬的小程序",
-    "navigationBarTextStyle":"black",
-		"enablePullDownRefresh":true
-		
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
-		"backgroundColor":"#fff",
+    "backgroundColor": "#fff",
     "list": [
-			{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-			"iconPath":"pages/index/icon.png",
-			"selectedIconPath":"pages/index/select_icon.png"
-			},
-			{
-			"pagePath": "pages/hardwareModule/hardwareModule",
-			"text": "手机硬件模块",
-			"iconPath":"pages/hardwareModule/icon.png",
-			"selectedIconPath":"pages/hardwareModule/select_icon.png"
-			},
-			{
-				"pagePath": "pages/componentModule/componentModule",
-				"text": "组件模块",
-				"iconPath":"pages/componentModule/icon.png",
-				"selectedIconPath":"pages/componentModule/select_icon.png"
-			}
-		]
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/index/icon.png",
+        "selectedIconPath": "pages/index/select_icon.png"
+      },
+      {
+        "pagePath": "pages/hardwareModule/hardwareModule",
+        "text": "API模块",
+        "iconPath": "pages/hardwareModule/icon.png",
+        "selectedIconPath": "pages/hardwareModule/select_icon.png"
+      },
+      {
+        "pagePath": "pages/componentModule/componentModule",
+        "text": "组件模块",
+        "iconPath": "pages/componentModule/icon.png",
+        "selectedIconPath": "pages/componentModule/select_icon.png"
+      }
+    ]
   },
   "networkTimeout": {
     "request": 60000,
     "downloadFile": 60000,
-		"connectSocket":60000,
-		"uploadFile":60000
+    "connectSocket": 60000,
+    "uploadFile": 60000
   },
-  "debug": true
+  "debug": true,
+  "plugins": {
+    "tengxunMap": {
+      "version": "1.0.6",
+      "provider": "wx5bc2ac602a747594"
+    }
+  }
 }

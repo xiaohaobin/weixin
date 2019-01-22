@@ -2,6 +2,8 @@
 const util = require('../../utils/util.js');
 const common = require('../../utils/common.js');
 
+
+
 //index.js
 //获取应用实例
 const app = getApp()
@@ -30,6 +32,7 @@ Page({
 	},
 	//页面加载的时候
 	onLoad: function () {
+		console.log("页面栈:",getCurrentPages());
 		if (app.globalData.userInfo) {
 			this.setData({
 				userInfo: app.globalData.userInfo,

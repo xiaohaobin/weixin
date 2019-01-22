@@ -1,0 +1,16 @@
+@import "../../lib/css/weui.wxss";
+.container{
+	padding: 10rpx;
+	width: 100%;
+}
+view{
+	width: 100%;
+}
+/** 修改button默认的点击态样式类**/
+.button-hover {
+  background-color: red;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover {
+  background-color: blue;
+}
